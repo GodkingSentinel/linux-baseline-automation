@@ -1,0 +1,7 @@
+---
+- name: Create systems admin user
+  user:
+    name: sysadmin
+    shell: /bin/bash
+    create_home: true
+    state: present
