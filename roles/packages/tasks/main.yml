@@ -1,0 +1,11 @@
+---
+- name: Install baseline administration packages
+  package:
+    name:
+      - git
+      - vim
+      - htop
+      - curl
+      - wget
+      - tree
+    state: present
