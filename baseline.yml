@@ -1,0 +1,26 @@
+---
+- name: Linux Baseline Automation
+  hosts: linux_servers
+  become: true
+
+  tasks:
+
+    - name: Update all packages
+      package:
+        name: "*"
+        state: latest
+
+    - name: Install Git
+      package:
+        name: git
+        state: present
+
+    - name: Install Vim
+      package:
+        name: vim
+        state: present
+
+    - name: Install htop
+      package:
+        name: htop
+        state: present
