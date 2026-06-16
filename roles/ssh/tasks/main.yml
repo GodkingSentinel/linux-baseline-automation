@@ -1,0 +1,11 @@
+---
+- name: Ensure SSH service is installed
+  package:
+    name: openssh-server
+    state: present
+
+- name: Ensure SSH service is running
+  service:
+    name: sshd
+    state: started
+    enabled: true
